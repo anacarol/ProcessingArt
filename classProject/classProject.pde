@@ -16,6 +16,7 @@ float cellW, cellH;
 void setup() {
 	size(600,400);
 	background(184,92,222);
+	noStroke();
 
 	cols = 15;
 	rows = 10;
@@ -30,7 +31,12 @@ void setup() {
 void draw() {
 	for(int i=0; i<cols; i++){
 		for(int j=0; j<rows; j++){
-			rect(i*cellW, j*cellH, cellW, cellH);
+			// rect(i*cellW, j*cellH, cellW, cellH);
+			float r = random(255);
+			float g = random(255);
+			float b = random(255);
+			fill(r,g,b, 50);
+			ellipse(i*cellW + cellW/2, j*cellH + cellH/2, cellW, cellH);
 		}
 	}
 
