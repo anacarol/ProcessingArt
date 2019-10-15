@@ -16,7 +16,7 @@ void setup() {
 	noStroke();
 
 	// Grid Definition
-	cols = 15;
+	cols = 16;
 	rows = 10;
 
 	// Grid Cell Size Definition
