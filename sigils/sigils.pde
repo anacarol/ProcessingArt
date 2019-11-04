@@ -45,9 +45,9 @@ void setup() {
 
 void draw() {
 	// background(255);
-	// println(name2Sigil);
+	
 	nLen = name2Sigil.size();
-	// println("nLen: "+nLen);
+	
 
 	// um = (i==1 && j==2) => (x = [cellW,2*cellW] && y = [2*cellH,3*cellH])
 	// dois = (i==2 && j==0) => (x = [2*cellW,3*cellW] && y = [0,cellH])
@@ -60,11 +60,22 @@ void draw() {
 	// nove = (i==1 && j==0) => (x = [cellW,2*cellW] && y = [0,cellH])
 
 	for(int n=0; n<nLen; n++){
-		println(name2Sigil.get(n));
-		// if(n==0){
-		// 	noFill();
-		// 	ellipse(x, y, 5, 5);
-		// }
+		// println(name2Sigil.get(n)+" "+sigilX+" "+sigilY);
+		println("name2Sigil: "+name2Sigil);
+
+		if(n==0){
+			noFill();
+			ellipse(sigilX.get(0), sigilY.get(0), 15, 15);
+		} else{
+			if(name2Sigil.get(n)==name2Sigil.get(n-1)){
+				fill(0);
+				ellipse(sigilX.get(n-1), sigilY.get(n-1), 15, 15);
+				sigilX.set(n, sigilX.get(n-1));
+				sigilY.set(n, sigilY.get(n-1));	
+			} else{
+				line(sigilX.get(n-1), sigilY.get(n-1), sigilX.get(n), sigilY.get(n));	
+			}
+		}
 	}
 	
 	// **** If there is no Loop: one word example -> astral = [112913] ****//
