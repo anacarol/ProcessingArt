@@ -7,7 +7,7 @@ void setup() {
 }
 
 void change_line_color(){
-	stroke(255);
+	stroke(255,0,0);    // adding a twist to the "barcode" feeling
 	line(x, 200, x, 100);	
 
 	// changing line colors...
