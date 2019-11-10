@@ -1,25 +1,41 @@
+import processing.core.*; 
+import processing.data.*; 
+import processing.event.*; 
+import processing.opengl.*; 
+
+import java.util.HashMap; 
+import java.util.ArrayList; 
+import java.io.File; 
+import java.io.BufferedReader; 
+import java.io.PrintWriter; 
+import java.io.InputStream; 
+import java.io.OutputStream; 
+import java.io.IOException; 
+
+public class seasons extends PApplet {
+
 float yLoc = 0;
 float sunDown_x = 0;
 float sunDown_y = 0;
 float sunX, sunY;
 
-void setup() {
-  size(400,300);
-  background(#BCF9FF);  
+public void setup() {
+  
+  background(0xffBCF9FF);  
   
   colorMode(HSB);
   frameRate(20);
 }
 
-void draw() {
+public void draw() {
   println(frameCount);
 
   // sunny day
   if(frameCount < 200){
 
-    background(#BCF9FF);
+    background(0xffBCF9FF);
     noStroke();
-    fill(#F8FC00);
+    fill(0xffF8FC00);
 
     sunX = 100 + sunDown_x;
     sunY = 100 + sunDown_y;
@@ -40,7 +56,7 @@ void draw() {
   if(frameCount > 200 && frameCount<500){
     noStroke();
 
-    fill(#0E1846);
+    fill(0xff0E1846);
     ellipse(0, 0, 100, 100);
     ellipse(50, 0, 100, 100);
     ellipse(100, 0, 100, 100);
@@ -85,4 +101,14 @@ void draw() {
 
   // //println(frameCount);
   
+}
+  public void settings() {  size(400,300); }
+  static public void main(String[] passedArgs) {
+    String[] appletArgs = new String[] { "seasons" };
+    if (passedArgs != null) {
+      PApplet.main(concat(appletArgs, passedArgs));
+    } else {
+      PApplet.main(appletArgs);
+    }
+  }
 }
