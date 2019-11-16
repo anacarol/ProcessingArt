@@ -14,7 +14,8 @@ import java.io.IOException;
 
 public class geo_butterfly extends PApplet {
 
-int r = 0;
+int x = 0;
+int y = 0;
 
 public void setup() {
     
@@ -38,7 +39,8 @@ public void draw() {
     if(n==0){
         noFill();
         stroke(255);    
-        // r = 0;
+        x = 0;
+        y = 0;
     }
     if(n==1){
         fill(random(255),0,random(255),50);
@@ -50,33 +52,37 @@ public void draw() {
         fill(0,random(255),random(255),50);
         noStroke();    
         rotate(0);
-        r = r + 3;
+        // r = r + 3;
         // r = int(random(-200,200));
+        x = PApplet.parseInt(random(400));
+        y = y + 3;
+        y = PApplet.parseInt(random(-400));
     }
-    println("r: "+r);
-    if(r==300){r = -300;}
+    // println("r: "+r);
+    // if(r==300){r = -300;}
+    // if(y==300){y = -300;}
     // Right Wings
-    triangle(400+r, 200+r, 450+r, 200+r, 425+r, 300+r);
-    triangle(400+r, 200+r, 425+r, 300+r, 350+r, 235+r);
-    triangle(350+r, 235+r, 425+r, 300+r, 330+r, 275+r);
+    triangle(400+x, 200+y, 450+x, 200+y, 425+x, 300+y);
+    triangle(400+x, 200+y, 425+x, 300+y, 350+x, 235+y);
+    triangle(350+x, 235+y, 425+x, 300+y, 330+x, 275+y);
 
-    triangle(330+r, 275+r, 415+r, 330+r, 340+r, 340+r);
-    triangle(415+r, 330+r, 340+r, 340+r, 375+r, 400+r);
+    triangle(330+x, 275+y, 415+x, 330+y, 340+x, 340+y);
+    triangle(415+x, 330+y, 340+x, 340+y, 375+x, 400+y);
 
     // Left Wings
-    triangle(290+r, 235+r, 205+r, 300+r, 310+r, 275+r);
-    triangle(290+r, 235+r, 205+r, 300+r, 240+r, 200+r);
-    triangle(240+r, 200+r, 205+r, 300+r, 190+r, 200+r);
+    triangle(290+x, 235+y, 205+x, 300+y, 310+x, 275+y);
+    triangle(290+x, 235+y, 205+x, 300+y, 240+x, 200+y);
+    triangle(240+x, 200+y, 205+x, 300+y, 190+x, 200+y);
 
-    triangle(310+r, 275+r, 225+r, 330+r, 300+r, 340+r);
-    triangle(225+r, 330+r, 300+r, 340+r, 260+r, 400+r);
+    triangle(310+x, 275+y, 225+x, 330+y, 300+x, 340+y);
+    triangle(225+x, 330+y, 300+x, 340+y, 260+x, 400+y);
 
 
     // Body
     noStroke();
     fill(255);
-    triangle(330+r, 275+r, 310+r, 275+r, 320+r, 245+r);
-    triangle(330+r, 275+r, 310+r, 275+r, 320+r, 320+r);
+    triangle(330+x, 275+y, 310+x, 275+y, 320+x, 245+y);
+    triangle(330+x, 275+y, 310+x, 275+y, 320+x, 320+y);
 
     
 
