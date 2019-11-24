@@ -23,18 +23,18 @@ public void setup() {
     
     background(0xff91F085);
 
-    frameRate(5);
+    frameRate(6);
 
 }
 
 public void draw() {
 
-    // // fill(random(255),0,random(255),50);
-    // fill(0,50);
-    fill(0xff91F085, 30);
-    noStroke();
-    rect(0, 0, width, height);
-    // background(#91F085, 30);
+    // // // fill(random(255),0,random(255),50);
+    // // fill(0,50);
+    // fill(#91F085, 30);
+    // noStroke();
+    // rect(0, 0, width, height);
+    background(0xff91F085, 30);
 
     int n = PApplet.parseInt(random(3));
 

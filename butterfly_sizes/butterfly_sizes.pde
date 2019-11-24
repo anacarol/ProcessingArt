@@ -7,18 +7,18 @@ void setup() {
     size(640,600);
     background(#91F085);
 
-    frameRate(5);
+    frameRate(6);
 
 }
 
 void draw() {
 
-    // // fill(random(255),0,random(255),50);
-    // fill(0,50);
-    fill(#91F085, 30);
-    noStroke();
-    rect(0, 0, width, height);
-    // background(#91F085, 30);
+    // // // fill(random(255),0,random(255),50);
+    // // fill(0,50);
+    // fill(#91F085, 30);
+    // noStroke();
+    // rect(0, 0, width, height);
+    background(#91F085, 30);
 
     int n = int(random(3));
 
