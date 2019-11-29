@@ -13,33 +13,47 @@ import java.io.OutputStream;
 import java.io.IOException; 
 
 public class funProgramming_3 extends PApplet {
-  public void setup() {
 
-textSize(200);
-text("hello",100,200);
+// size(700,400);
+// background(255);
 
-// void setup() {
-//   size(400, 400);
-//   background(#3355CC);
-// }
+// textSize(160);
+// fill(232,222,10);
+// // text("hello",10,240);
+// text("Bom Dia",20,240);
 
-// void draw() {
-//   fill(#3355CC, 20);
-//   rect(0,0,width, height);
-// }
+// textSize(80);
+// text("flor do dia", 150, 320);
 
-// void keyPressed() {
+
+public void setup() {
+  
+  background(255);
+}
+
+public void draw() {
+  fill(0, 20);
+  rect(0,0,width, height);
+    
+}
+
+public void keyPressed() {
 //   fill(#FFE200);
 //   textSize(random(20, 200));
 //   text(key, random(300), random(100,400));
-// }
+
+    textSize(random(10,160));
+    fill(232,222,10);
+    text(key,random(width),random(160,height));
+    
+    // textSize(80);
+    // text("flor do dia", 150, 320);
+
+}
 
 
 
-    noLoop();
-  }
-
-  public void settings() { size(600,600); }
+  public void settings() {  size(700, 400); }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "funProgramming_3" };
     if (passedArgs != null) {
