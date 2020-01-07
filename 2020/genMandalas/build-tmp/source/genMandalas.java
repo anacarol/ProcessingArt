@@ -59,6 +59,12 @@ public void draw(){
 }
 
 
+public void keyPressed(){
+	if(keyCode == ENTER){
+		saveFrame("mandala-####.jpg");
+	}
+}
+
 
 // // rotating a triangle moving on a sin cos wave...
 // void draw(){
@@ -142,7 +148,7 @@ public void draw(){
 // 90degrees -> PI/2
   public void settings() { 	size(600,600); }
   static public void main(String[] passedArgs) {
-    String[] appletArgs = new String[] { "genMandalas" };
+    String[] appletArgs = new String[] { "--present", "--window-color=#666666", "--stop-color=#cccccc", "genMandalas" };
     if (passedArgs != null) {
       PApplet.main(concat(appletArgs, passedArgs));
     } else {

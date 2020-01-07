@@ -46,7 +46,7 @@ public void draw(){
 
   public void settings() { 	size(600,600); }
   static public void main(String[] passedArgs) {
-    String[] appletArgs = new String[] { "sinWaves" };
+    String[] appletArgs = new String[] { "--present", "--window-color=#666666", "--stop-color=#cccccc", "sinWaves" };
     if (passedArgs != null) {
       PApplet.main(concat(appletArgs, passedArgs));
     } else {

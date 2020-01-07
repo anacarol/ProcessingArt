@@ -43,6 +43,12 @@ void draw(){
 }
 
 
+void keyPressed(){
+	if(keyCode == ENTER){
+		saveFrame("mandala-####.jpg");
+	}
+}
+
 
 // // rotating a triangle moving on a sin cos wave...
 // void draw(){
