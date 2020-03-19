@@ -1,10 +1,26 @@
+import processing.core.*; 
+import processing.data.*; 
+import processing.event.*; 
+import processing.opengl.*; 
+
+import java.util.HashMap; 
+import java.util.ArrayList; 
+import java.io.File; 
+import java.io.BufferedReader; 
+import java.io.PrintWriter; 
+import java.io.InputStream; 
+import java.io.OutputStream; 
+import java.io.IOException; 
+
+public class paintings extends PApplet {
+
 PImage mainImage;
 
 
-void setup() {
+public void setup() {
 	background(255, 255, 255);
 
-	size(433, 765);
+	
 	mainImage = loadImage("/Users/anacarolina/Desktop/myArt/ProcessingPhotos/leaves.jpg");
 
 	// size(670, 1000);
@@ -19,7 +35,7 @@ void setup() {
 	// frameRate(2000);
 }
 
-void draw() {
+public void draw() {
 	translate(width/2, height/2);
 
 	float t = (float)frameCount;
@@ -41,4 +57,14 @@ void draw() {
 	// // stroke(c);//,100);
 	// // line(randomX,randomY,randomX+20,randomY+30);
 	
+}
+  public void settings() { 	size(433, 765); }
+  static public void main(String[] passedArgs) {
+    String[] appletArgs = new String[] { "--present", "--window-color=#666666", "--stop-color=#cccccc", "paintings" };
+    if (passedArgs != null) {
+      PApplet.main(concat(appletArgs, passedArgs));
+    } else {
+      PApplet.main(appletArgs);
+    }
+  }
 }
